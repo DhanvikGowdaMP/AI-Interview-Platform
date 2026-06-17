@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+
+        <a class="navbar-brand" href="/dashboard">
+            AI Interview Platform
+        </a>
+
+        <div class="ms-auto">
+
+            <a href="/dashboard" class="btn btn-primary me-2">
+                Dashboard
+            </a>
+
+            <a href="/history" class="btn btn-info me-2">
+                History
+            </a>
+
+            <a href="/profile" class="btn btn-success me-2">
+                Profile
+            </a>
+
+            {% if session.get('is_admin') == 1 %}
+            <a href="/admin/users" class="btn btn-warning me-2">
+                Admin Panel
+            </a>
+            {% endif %}
+
+            <a href="/logout" class="btn btn-danger">
+                Logout
+            </a>
+            <a href="/admins" class="btn btn-dark me-2">
+               Admins
+            </a>
+
+        </div>
+
+    </div>
+</nav>
