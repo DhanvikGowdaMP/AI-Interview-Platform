@@ -17,7 +17,11 @@ import re
 from dotenv import load_dotenv
 
 from database import create_database
+import os
 
+if os.path.exists("users.db"):
+    os.remove("users.db")
+    
 create_database()
 
 load_dotenv()
