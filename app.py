@@ -15,7 +15,11 @@ from flask import redirect
 from ai_answer_evaluator import evaluate_answers
 import re
 from dotenv import load_dotenv
-import database
+
+from database import create_database
+
+create_database()
+
 load_dotenv()
 
 app = Flask(__name__)
