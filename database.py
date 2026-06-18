@@ -26,9 +26,17 @@ CREATE TABLE IF NOT EXISTS users(
         user_email TEXT,
         filename TEXT,
         skills TEXT,
+        strength INTEGER DEFAULT 1,
         upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
     ''')
+
+    try:
+       cursor.execute(
+        "ALTER TABLE resume_analysis ADD COLUMN strength INTEGER DEFAULT 1"
+       )
+    except:
+     pass
 
     conn.commit()
     conn.close()
