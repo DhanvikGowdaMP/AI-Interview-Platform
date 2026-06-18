@@ -67,6 +67,10 @@ def register():
                 'register.html',
                 error="Email already registered. If new User try again with your email id."
             )
+        if email.lower()=="dhanvikmpgowda@gmail.com":
+            is_admin=1
+        else:
+            is_admin=0
 
         cursor.execute(
             """
@@ -80,7 +84,7 @@ def register():
                 hashed_password,
                 phone,
                 linkedin,
-                1
+                is_admin
             )
         )
 
