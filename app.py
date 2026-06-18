@@ -1334,6 +1334,9 @@ def admin_delete_interview(report_id):
     conn.close()
 
     return redirect('/admin/interview_reports')
+@app.route('/developer')
+def developer():
+    return render_template('developer.html')
 # Run Flask Application
 if __name__ == '__main__':
     app.run(debug=True)
