@@ -71,15 +71,16 @@ def register():
         cursor.execute(
             """
             INSERT INTO users
-            (name,email,password,phone,linkedin)
-            VALUES(?,?,?,?,?)
+            (name,email,password,phone,linkedin,is_admin)
+            VALUES(?,?,?,?,?,?)
             """,
             (
                 name,
                 email,
                 hashed_password,
                 phone,
-                linkedin
+                linkedin,
+                1
             )
         )
 
