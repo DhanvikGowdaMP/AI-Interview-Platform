@@ -128,6 +128,9 @@ def login():
             )
 
              admin = cursor.fetchone()
+             print("LOGIN USER:", user)
+             print("SESSION EMAIL:", session['email'])
+             print("SESSION NAME:", session['name'])
 
              return render_template(
                 'dashboard.html',
