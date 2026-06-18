@@ -262,6 +262,9 @@ def history():
 
     records = cursor.fetchall()
 
+    print("SESSION EMAIL:", session['email'])
+    print("HISTORY RECORDS:", records)
+
     conn.close()
 
     return render_template(
