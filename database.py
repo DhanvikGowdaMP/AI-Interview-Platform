@@ -38,6 +38,17 @@ CREATE TABLE IF NOT EXISTS users(
     except:
      pass
 
+    # Interview Results Table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS interview_results(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_email TEXT,
+        score TEXT,
+        evaluation TEXT,
+        interview_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    ''')
+
     conn.commit()
     conn.close()
 
