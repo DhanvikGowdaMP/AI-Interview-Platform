@@ -158,11 +158,15 @@ def upload_resume():
 
             filename = secure_filename(file.filename)
 
+            upload_folder = os.path.join(os.getcwd(), "uploads")
+
+            if not os.path.exists(upload_folder):
+                os.makedirs(upload_folder)
+
             filepath = os.path.join(
-                'uploads',
+                upload_folder,
                 filename
             )
-
             file.save(filepath)
 
             text = ""
