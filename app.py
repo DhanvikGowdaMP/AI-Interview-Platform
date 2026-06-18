@@ -235,6 +235,7 @@ def profile():
     )
 
     user = cursor.fetchone()
+    print("PROFILE USER:", user)
 
     conn.close()
 
