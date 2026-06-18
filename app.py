@@ -29,6 +29,11 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = "mysecretkey123"
 
+UPLOAD_FOLDER = "uploads"
+
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 # Home Page
 #@app.route('/')
 #def home():
