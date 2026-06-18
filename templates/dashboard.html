@@ -17,8 +17,9 @@
             <h1 class="text-primary">
                 Welcome, {{ name }} 👋
             </h1>
+
             <h4 class="text-secondary">
-                Your AI-Powered Interview Preparation Assistant
+                Intelligent Resume Analysis & Interview Preparation Platform
             </h4>
 
             <hr>
@@ -26,92 +27,174 @@
             <div class="mb-4">
 
                 <a href="/upload_resume" class="btn btn-primary">
-   📄 Upload Resume
-</a>
+                    📄 Upload Resume
+                </a>
 
-<a href="/history" class="btn btn-info">
-   📊 Analysis History
-</a>
+                <a href="/history" class="btn btn-info">
+                    📊 Analysis History
+                </a>
 
-<a href="/interview_history" class="btn btn-secondary">
-   🎤 Interview History
-</a>
+                <a href="/interview_history" class="btn btn-secondary">
+                    🎤 Interview History
+                </a>
 
-<a href="/interview_analytics" class="btn btn-warning">
-   📈 Interview Analytics
-</a>
+                <a href="/interview_analytics" class="btn btn-warning">
+                    📈 Interview Analytics
+                </a>
 
-<a href="/profile" class="btn btn-success">
-   👤 Profile
-</a>
+                <a href="/profile" class="btn btn-success">
+                    👤 Profile
+                </a>
 
                 {% if is_admin == 1 %}
                 <a href="/admins" class="btn btn-dark">
-                   👥 Admins
+                    👥 Admins
                 </a>
                 {% endif %}
 
                 <a href="/logout" class="btn btn-danger">
-                   🚪 Logout
+                    🚪 Logout
                 </a>
+
             </div>
-           {% if is_admin == 1 %}
-           <div class="alert alert-success">
-              Administrator Account
+
+            {% if is_admin == 1 %}
+            <div class="alert alert-success">
+                Administrator Account
             </div>
             {% endif %}
 
-<h3>Features</h3>
+            {% if is_admin == 1 %}
 
-{% if is_admin == 1 %}
+            <hr>
 
-<hr>
+            <h4 class="text-danger">
+                Admin Panel
+            </h4>
 
-<h4 class="text-danger">
-    Admin Panel
-</h4>
+            <div class="mb-3">
 
-<div class="mb-3">
+                <a href="/admin/dashboard" class="btn btn-primary">
+                    📊 Admin Dashboard
+                </a>
 
-    <a href="/admin/dashboard" class="btn btn-primary">
-        📊 Admin Dashboard
-    </a>
+                <a href="/admin/users" class="btn btn-dark">
+                    👥 View Users
+                </a>
 
-    <a href="/admin/users" class="btn btn-dark">
-        👥 View Users
-    </a>
+                <a href="/admin/analysis" class="btn btn-warning">
+                    📄 View Analysis
+                </a>
 
-    <a href="/admin/analysis" class="btn btn-warning">
-        📄 View Analysis
-    </a>
-    
+            </div>
+
+            {% endif %}
+
+            <hr>
+
+            <h3 class="text-primary">
+                Platform Features
+            </h3>
+
+            <ul class="list-group">
+
+                <li class="list-group-item">
+                    📄 Resume Upload & Analysis
+                </li>
+
+                <li class="list-group-item">
+                    🧠 Automated Skill Extraction
+                </li>
+
+                <li class="list-group-item">
+                    🎤 AI-Powered Mock Interviews
+                </li>
+
+                <li class="list-group-item">
+                    🤖 Gemini-Based Question Generation
+                </li>
+
+                <li class="list-group-item">
+                    📊 Performance Analytics & Reports
+                </li>
+
+                <li class="list-group-item">
+                    📚 Interview & Resume History Tracking
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 </div>
 
-{% endif %}
+<!-- About Developer Card -->
 
-<ul class="list-group">
+<div class="card shadow-lg position-fixed"
+     style="
+        bottom:20px;
+        right:20px;
+        width:350px;
+        z-index:1000;
+        border-radius:15px;
+     ">
 
-    <li class="list-group-item">
-        📄 Upload Resume
-    </li>
+    <div class="card-body">
 
-    <li class="list-group-item">
-        🧠 Skill Analysis
-    </li>
+        <h5 class="text-primary">
+            About the Developer
+        </h5>
 
-    <li class="list-group-item">
-        🎤 Mock Interview
-    </li>
+        <hr>
 
-    <li class="list-group-item">
-        📊 Performance Report
-    </li>
+        <p class="mb-1">
+            <strong>Dhanvik Gowda M P</strong>
+        </p>
 
-</ul>
+        <p class="text-muted small mb-2">
+            Information Science and Engineering Student
+        </p>
 
+        <p class="small mb-1">
+            CMR Institute of Technology, Bengaluru
+        </p>
 
-        </div>
+        <p class="small mb-3">
+            AI & Software Development Enthusiast
+        </p>
+
+        <p class="small text-secondary">
+            Developed an AI-powered Interview Preparation Platform that performs
+            resume analysis, skill extraction, AI-generated interview question
+            generation, answer evaluation, interview history tracking, and
+            performance analytics using Flask, SQLite, Python, and Google Gemini AI.
+        </p>
+
+        <hr>
+
+        <p class="small mb-1">
+            <strong>Contact</strong>
+        </p>
+
+        <p class="small text-secondary mb-3">
+            📧 dhanvikmpgowda@gmail.com
+            <br>
+            📍 Bengaluru, Karnataka, India
+        </p>
+
+        <a href="https://www.linkedin.com/in/dhanvik-gowda-m-p-b81433321"
+           target="_blank"
+           class="btn btn-outline-primary btn-sm">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/DhanvikGowdaMP"
+           target="_blank"
+           class="btn btn-outline-dark btn-sm">
+            GitHub
+        </a>
 
     </div>
 
