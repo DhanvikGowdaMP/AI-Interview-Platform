@@ -23,7 +23,7 @@ def generate_ai_questions(resume_text):
     Return only questions.
     """
 
-    model = genai.GenerativeModel("gemini-2.5-flash")
+    model = genai.GenerativeModel("gemini-3.8-flash")
 
     response = model.generate_content(prompt)
 
