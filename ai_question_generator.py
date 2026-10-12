@@ -17,8 +17,7 @@ def generate_ai_questions(resume_text):
     Generate:
 
     5 Technical Questions
-    3 HR Questions
-    2 Project Questions
+    3 Project Questions
 
     Return only questions.
     """
